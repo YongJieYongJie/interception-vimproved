@@ -107,6 +107,7 @@ public:
       default: throw std::exception();
     }
   }
+  virtual ~Intercept() = default;
 
 protected:
   Intercept(Key intercept, Key tap)
