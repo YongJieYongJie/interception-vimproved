@@ -1,3 +1,7 @@
+# Note: The "from" keys in this file refers to the physical keys, which
+# generally means that it is based on QWERTY layout even if you are using
+# Dvorak.
+
 - intercept: KEY_CAPSLOCK
   ontap: KEY_ESC
   onhold: KEY_LEFTCTRL
@@ -7,28 +11,28 @@
   onhold: KEY_RIGHTCTRL
 
 # this is a layer. hold space (onhold) contains several remappings
-- intercept: KEY_SPACE
+- intercept: KEY_TAB
   onhold:
 
   # special chars
-  - from: KEY_E
-    to: KEY_ESC
+  # - from: KEY_E
+  #   to: KEY_ESC
 
   # alternative syntax
   - {from: KEY_D, to: KEY_DELETE}
   - {from: KEY_B, to: KEY_BACKSPACE}
 
-  # vim home row
-  - {from: KEY_H, to: KEY_LEFT}
-  - {from: KEY_J, to: KEY_DOWN}
-  - {from: KEY_K, to: KEY_UP}
+  # arrow keys
+  - {from: KEY_I, to: KEY_UP}
+  - {from: KEY_K, to: KEY_DOWN}
+  - {from: KEY_J, to: KEY_LEFT}
   - {from: KEY_L, to: KEY_RIGHT}
 
-  # vim above home row
-  - {from: KEY_Y, to: KEY_HOME}
-  - {from: KEY_U, to: KEY_PAGEDOWN}
-  - {from: KEY_I, to: KEY_PAGEUP}
-  - {from: KEY_O, to: KEY_END}
+  # page up/down keys
+  - {from: KEY_E, to: KEY_PAGEUP}
+  - {from: KEY_D, to: KEY_PAGEDOWN}
+  - {from: KEY_S, to: KEY_HOME}
+  - {from: KEY_F, to: KEY_END}
 
   # number row, to F keys
   - {from: KEY_1, to: KEY_F1}
@@ -45,10 +49,14 @@
   - {from: KEY_EQUAL, to: KEY_F12}
 
   # xf86 audio
-  - {from: KEY_M, to: KEY_MUTE}
+  - {from: KEY_M,     to: KEY_MUTE}
   - {from: KEY_COMMA, to: KEY_VOLUMEDOWN}
-  - {from: KEY_DOT, to: KEY_VOLUMEUP}
+  - {from: KEY_DOT,   to: KEY_VOLUMEUP}
+
+  # brightness
+  - {from: KEY_X, to: KEY_BRIGHTNESSDOWN}
+  - {from: KEY_C, to: KEY_BRIGHTNESSUP}
 
   # mouse navigation
-  - {from: BTN_LEFT, to: BTN_BACK}
+  - {from: BTN_LEFT,  to: BTN_BACK}
   - {from: BTN_RIGHT, to: BTN_FORWARD}
